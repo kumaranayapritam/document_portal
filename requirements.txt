@@ -8,5 +8,5 @@ pypdf
 faiss-cpu
 structlog
 PyMuPDF
-pydantic
+pandas
 -e .
