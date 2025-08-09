@@ -9,4 +9,5 @@ faiss-cpu
 structlog
 PyMuPDF
 pandas
+docx2txt
 -e .
