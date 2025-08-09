@@ -8,4 +8,6 @@ logs/
 *.pyc
 test.py
 *.pdf
+faiss_index/
+data/single_document_chat/*.pdf
 
