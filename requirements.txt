@@ -1,13 +1,18 @@
-langchain
-python-dotenv
-ipykernel
-langchain_groq
-langchain_google_genai
-langchain_community
-pypdf
-faiss-cpu
-structlog
-PyMuPDF
-pandas
-docx2txt
+langchain==0.3.26
+python-dotenv==1.1.1
+ipykernel==6.29.5
+langchain_groq==0.3.6
+langchain_google_genai==2.1.8
+langchain-community==0.3.27
+faiss-cpu==1.11.0.post1
+structlog==25.4.0
+PyMuPDF==1.26.3
+pylint (not installed)
+langchain-core==0.3.72
+pytest (not installed)
+streamlit==1.47.1
+fastapi==0.116.1
+uvicorn==0.35.0
+python-multipart==0.0.20
+docx2txt==0.9
 -e .
