@@ -3,6 +3,7 @@ import os
 import sys
 from dotenv import load_dotenv
 from utils.config_loader import load_config
+from .config_loader import load_config
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_groq import ChatGroq
@@ -83,7 +84,7 @@ class ModelLoader:
         elif provider == "groq":
             llm=ChatGroq(
                 model=model_name,
-                api_key=self.api_keys["GROQ_API_KEY"],
+                api_key=self.api_keys["GROQ_API_KEY"], #type: ignore
                 temperature=temperature,
             )
             return llm
@@ -107,6 +108,10 @@ if __name__ == "__main__":
     # Test embedding model loading
     embeddings = loader.load_embeddings()
     print(f"Embedding Model Loaded: {embeddings}")
+    
+    # Test the ModelLoader
+    result=embeddings.embed_query("Hello, how are you?")
+    print(f"Embedding Result: {result}")
     
     # Test LLM loading based on YAML config
     llm = loader.load_llm()
