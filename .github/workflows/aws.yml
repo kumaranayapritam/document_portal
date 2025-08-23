@@ -4,8 +4,7 @@ on:
     workflows: ["Run Unit Tests"]   # Match the name in your ci.yaml
     types:
       - completed
-      
-    branches: [ main ]
+    
 env:
   AWS_REGION: us-east-1
   ECR_REPOSITORY: documentportalliveclass
