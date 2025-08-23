@@ -1,9 +1,14 @@
 name: CI/CD to ECS Fargate
 on:
+  # Add direct push trigger for testing
+  push:
+    branches: [ main ]
+  # Keep existing workflow_run trigger
   workflow_run:
-    workflows: ["Run Unit Tests"]   # Match the name in your ci.yaml
+    workflows: ["Run Unit Tests"]
     types:
       - completed
+    branches: [ main ]
 env:
   AWS_REGION: us-east-1
   ECR_REPOSITORY: documentportalliveclass
