@@ -19,7 +19,11 @@ class ModelLoader:
     
     def __init__(self):
         
-        load_dotenv()
+        if os.getenv("ENV", "local").lower() != "production":
+            load_dotenv()
+            log.info("Running in LOCAL mode: .env file loaded")
+        else:
+            log.info("Running in PRODUCTION mode: .env not loaded")
         self._validate_env()
         self.config=load_config()
         log.info("Configuration loaded successfully", config_keys=list(self.config.keys()))
