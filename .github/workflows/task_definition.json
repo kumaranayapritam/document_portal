@@ -1,7 +1,7 @@
 {
   "family": "documentportaltd",
   "networkMode": "awsvpc",
-  "executionRoleArn": "arn:aws:iam::764614244803:user/githublive",
+  "executionRoleArn": "arn:aws:iam::764614244803:role/liveclass",
   "requiresCompatibilities": ["FARGATE"],
   "cpu": "1024",
   "memory": "8192",
