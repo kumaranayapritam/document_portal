@@ -30,10 +30,8 @@
         {
           "name": "API_KEYS",
           "valueFrom": "arn:aws:secretsmanager:us-east-1:764614244803:secret:apikeyliveclass-OVBnCn"
-        },
-     
-     
-        
+        }
+            
       ],
       "logConfiguration": {
         "logDriver": "awslogs",
