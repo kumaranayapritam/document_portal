@@ -13,6 +13,7 @@ env:
   ECS_TASK_DEFINITION: .github/workflows/task_definition.json
   CONTAINER_NAME: document-portal-container
 
+
 permissions:
   id-token: write
   contents: read
